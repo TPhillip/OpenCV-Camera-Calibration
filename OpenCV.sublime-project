@@ -9,8 +9,8 @@
 	"settings":
     {
      	"sublimegdb_commandline": "gdb -nx -readnow -fullname --interpreter=mi -args ./main",
-    	"sublimegdb_arguments": "-c=0 -f=100",
-	    //"sublimegdb_arguments": "-i image.jpg",
+    	//"sublimegdb_arguments": "-c=0 -f=10",
+	    "sublimegdb_arguments": "-i=image.jpg",
 		"sublimegdb_workingdir": "${folder:${project_path:main}}"
     }
 }

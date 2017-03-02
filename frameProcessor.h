@@ -1,4 +1,5 @@
 #include "opencv2/opencv.hpp"
+#include <thread>
 
 enum imageSource {CAPTURE_DEVICE, IMAGE_FILE};
 
@@ -7,8 +8,11 @@ public:
 	frameProcessor(imageSource image_source, cv::Size boardSize, int source_v4l_device = 0, int calibrationFramesCount = 0);
 	void loopProcessCaptureDev();
     void processSingleImg(cv::Mat image);
+    void runCorrection();
 
 private:
+	cv::Mat current_frame;
+	cv::Mat undistored_frame;
 	cv::Size *boardSize;
 	std::vector<cv::Point2f> *centers;
 	std::vector<cv::Point3f> *obj;

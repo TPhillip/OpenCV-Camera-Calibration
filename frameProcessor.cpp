@@ -22,23 +22,23 @@ void frameProcessor::loopProcessCaptureDev(){
 	if(image_source == CAPTURE_DEVICE){
 		if(capDev.open(source_v4l_device)){
 			int good_frames = 0;
+			bool result_found = false;
 			while(true){
-				cv::Mat camFrame;
-				capDev >> camFrame;
-				if(camFrame.empty() ) break;
+				capDev >> current_frame;
+				if(current_frame.empty() ) break;
 
 				//  --- tracking the checkerboard pattern ---
 
-				bool patternWasFound = cv::findChessboardCorners(camFrame, *boardSize, *centers, cv::CALIB_CB_FAST_CHECK | CV_CALIB_CB_ADAPTIVE_THRESH);
-				cv::drawChessboardCorners(camFrame, *boardSize, *centers, patternWasFound);
+				bool patternWasFound = cv::findChessboardCorners(current_frame, *boardSize, *centers, cv::CALIB_CB_FAST_CHECK | CV_CALIB_CB_ADAPTIVE_THRESH);
+				cv::drawChessboardCorners(current_frame, *boardSize, *centers, patternWasFound);
 
 				// --pattern is found, do stuff ---
 
 				if(patternWasFound && (good_frames < calibration_frames_count)){
             		std::string text = "Pattern found";
-            		cv::putText(camFrame, text , cvPoint(30, 30), cv::FONT_HERSHEY_PLAIN, 1.5, cvScalar(0,0,255), 2);
+            		cv::putText(current_frame, text , cvPoint(30, 30), cv::FONT_HERSHEY_PLAIN, 1.5, cvScalar(0,0,255), 2);
             		text = "saved frame(s) " + std::to_string(good_frames) + "/" +  std::to_string(calibration_frames_count);
-            		cv::putText(camFrame, text, cvPoint(30, 70), cv::FONT_HERSHEY_PLAIN, 1.5, cvScalar(0,0,255), 2);
+            		cv::putText(current_frame, text, cvPoint(30, 70), cv::FONT_HERSHEY_PLAIN, 1.5, cvScalar(0,0,255), 2);
 
         			objVec->push_back(*obj);
             		centersVec->push_back(*centers);
@@ -46,11 +46,18 @@ void frameProcessor::loopProcessCaptureDev(){
             		good_frames++;
             	}
             	else if(good_frames >= calibration_frames_count){
+            		runCorrection();
+            		break;
             		std::string text = "Calibration threshold reached!";
-            		cv::putText(camFrame, text , cvPoint(30, 30), cv::FONT_HERSHEY_PLAIN, 1.5, cvScalar(0,255,0), 2);
+            		cv::putText(current_frame, text , cvPoint(30, 30), cv::FONT_HERSHEY_PLAIN, 1.5, cvScalar(0,255,0), 2);
+            		if(!result_found){
+            			//std::thread result(&frameProcessor::runCorrection, this);
+            			result_found = true;
+            		}
+            		
             	}
 
-				cv::imshow("frame", camFrame);
+				cv::imshow("frame", current_frame);
 				if( cv::waitKey(100) == 27){
 	    			break;
 				}
@@ -62,9 +69,43 @@ void frameProcessor::loopProcessCaptureDev(){
 }
 
 void frameProcessor::processSingleImg(cv::Mat image){ 
+	this->current_frame = image;
 	if(image_source == IMAGE_FILE){
-		cv::imshow("file", image);
+
+		bool patternWasFound = cv::findChessboardCorners(current_frame, *boardSize, *centers, CV_CALIB_CB_ADAPTIVE_THRESH);
+		cv::drawChessboardCorners(current_frame, *boardSize, *centers, patternWasFound);
+
+		// --pattern is found, do stuff ---
+
+		if(patternWasFound){
+			objVec->push_back(*obj);
+    		centersVec->push_back(*centers);
+    		cv::imshow("originalImage", current_frame);
+    		runCorrection();
+    	}
+    	else{
+    		cv::imshow("file", image);
+    	}
 		cv::waitKey(0);
 	}
 }
 
+void frameProcessor::runCorrection(){
+	cv::Mat cameraMatrix = cv::Mat(3, 3, CV_64F);
+    cameraMatrix.at<double>(0,0) = 1.0;
+
+    cv::Mat distCoeffs;
+    distCoeffs = cv::Mat::zeros(8, 1, CV_64F);
+
+    std::vector<cv::Mat> rvecs;
+    std::vector<cv::Mat> tvecs;
+
+    cv::Size imageSize = current_frame.size();
+
+    cv::calibrateCamera(*objVec, *centersVec, *boardSize, cameraMatrix, distCoeffs, rvecs, tvecs);
+    cv::undistort(current_frame, undistored_frame, cameraMatrix, distCoeffs);
+    std::string text = "Image Corrected!";
+	cv::putText(undistored_frame, text , cvPoint(30, 30), cv::FONT_HERSHEY_PLAIN, 1.5, cvScalar(0,255,0), 2);
+	cv::imshow("Corrected Image", undistored_frame);
+	cv::waitKey(0);
+}
