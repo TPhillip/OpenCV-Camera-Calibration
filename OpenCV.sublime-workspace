@@ -1,0 +1,776 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cam",
+				"camFrame"
+			],
+			[
+				"cap",
+				"capDev"
+			],
+			[
+				"capd",
+				"capDevNum"
+			],
+			[
+				"vi",
+				"VideoCapture\tVideoCapture"
+			],
+			[
+				"CXX",
+				"CXXFLAGS"
+			],
+			[
+				"PRO",
+				"PROGRAM"
+			],
+			[
+				"boar",
+				"board_w"
+			],
+			[
+				"boa",
+				"board_h"
+			],
+			[
+				"imre",
+				"imread\tcv::Mat imread(const cv::String &filename)"
+			],
+			[
+				"frame",
+				"frameProcessor"
+			],
+			[
+				"fa",
+				"frame_corrected"
+			],
+			[
+				"frame_",
+				"frame_corrected"
+			],
+			[
+				"pattern",
+				"patternWasFound"
+			],
+			[
+				"Scalar",
+				"CvScalar\tCvScalar"
+			],
+			[
+				"cvPo",
+				"cvPoint\tCvPoint cvPoint(int x, int y)"
+			],
+			[
+				"patter",
+				"patternWasFound"
+			],
+			[
+				"findcorner",
+				"find4QuadCornerSubpix\tbool find4QuadCornerSubpix(InputArray img, InputOutputArray corners, Size region_size)"
+			],
+			[
+				"board",
+				"board_w"
+			],
+			[
+				"point",
+				"Point\tPoint"
+			],
+			[
+				"in",
+				"int"
+			],
+			[
+				"pr",
+				"product"
+			],
+			[
+				"c",
+				"c_str\tconst char * c_str() const"
+			],
+			[
+				"push",
+				"push_back\tvoid push_back(value_type &&__x)"
+			],
+			[
+				"int",
+				"int16_t\tint16_t"
+			],
+			[
+				"is",
+				"isPrime"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.cpp.bak",
+			"settings":
+			{
+				"buffer_size": 2236,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "main.cpp",
+			"settings":
+			{
+				"buffer_size": 1460,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "frameProcessor.h",
+			"settings":
+			{
+				"buffer_size": 381,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "frameProcessor.cpp",
+			"settings":
+			{
+				"buffer_size": 821,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "makefile",
+			"settings":
+			{
+				"buffer_size": 1272,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "OpenCV.sublime-project",
+			"settings":
+			{
+				"buffer_size": 315,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/User/make C++.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Release"
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C++ Single File (OpenCV).sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++ Single File (OpenCV).sublime-build",
+					"Release"
+				],
+				[
+					"Packages/User/C++ Single File (OpenCV).sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/C++ Single File (OpenCV).sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C++ Single File (OpenCV).sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++ Single File (OpenCV).sublime-build",
+					"Release"
+				],
+				[
+					"Packages/User/C++ Single File (OpenCV).sublime-build",
+					"Run With Image"
+				]
+			],
+			[
+				"Packages/User/C++ Single File (OpenCV).sublime-build",
+				"Run With Image"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/c++ (opencv).sublime-build",
+					""
+				],
+				[
+					"Packages/User/c++ (opencv).sublime-build",
+					"Release"
+				],
+				[
+					"Packages/User/c++ (opencv).sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/c++ (opencv).sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/make C++.sublime-build",
+					""
+				],
+				[
+					"Packages/User/make C++.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/make C++.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 528.0,
+		"last_filter": "build",
+		"selected_items":
+		[
+			[
+				"build",
+				"Build With: make C++"
+			],
+			[
+				"sidebar",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"",
+				"Build With: make C++ - Run"
+			],
+			[
+				"buil",
+				"Build With: make C++ - Run"
+			],
+			[
+				"resource",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"builf",
+				"Build With: C++ Single File (OpenCV) - Run With Image"
+			],
+			[
+				"packa",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"bu",
+				"Build With: C++ Single File - Run"
+			],
+			[
+				"pack",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"stop d",
+				"SublimeGDB: Stop Debugging"
+			],
+			[
+				"stop de",
+				"SublimeGDB: Stop Debugging"
+			],
+			[
+				"stop deb",
+				"SublimeGDB: Stop Debugging"
+			],
+			[
+				"pcr",
+				"Package Control: Remove Package"
+			],
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"sideb",
+				"View: Toggle Side Bar"
+			],
+			[
+				"packager",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"debug",
+				"Build With: C++ Single File - Debug"
+			],
+			[
+				"packagere",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"gdb",
+				"SublimeGDB: Start Debugging"
+			],
+			[
+				"sublimeg",
+				"Preferences: SublimeGDB Settings – Default"
+			],
+			[
+				"menu",
+				"View: Toggle Menu"
+			],
+			[
+				"men",
+				"View: Toggle Menu"
+			],
+			[
+				"status",
+				"View: Toggle Status Bar"
+			],
+			[
+				"paci",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 815.0
+	},
+	"console":
+	{
+		"height": 425.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/alias/Projects/CPP/OpenCV"
+	],
+	"file_history":
+	[
+		"/home/alias/.config/sublime-text-3/Packages/User/SublimeGDB.sublime-settings",
+		"/home/alias/Projects/CPP/OpenCV/image.jpg",
+		"/build/gcc/src/gcc/libstdc++-v3/libsupc++/new_op.cc",
+		"/build/gcc/src/gcc/libgcc/unwind-dw2.c",
+		"/usr/include/opencv2/core/cvstd.inl.hpp",
+		"/build/gcc/src/gcc/libgcc/unwind.inc",
+		"/home/alias/Projects/CPP/OpenCV/makefile",
+		"/home/alias/.config/sublime-text-3/Packages/User/make C++.sublime-build",
+		"/build/gcc/src/gcc/libstdc++-v3/libsupc++/vterminate.cc",
+		"/build/gcc/src/gcc-build/x86_64-pc-linux-gnu/libstdc++-v3/include/bits/basic_string.h",
+		"/home/alias/.config/sublime-text-3/Packages/User/C++ Single File (OpenCV).sublime-build",
+		"/home/alias/Projects/CPP/OpenCV/main",
+		"/home/alias/Projects/CPP/OpenCV/main_.cpp",
+		"/home/alias/.config/sublime-text-3/Packages/C++/C++ Single File.sublime-build",
+		"/usr/include/opencv2/core/types.hpp",
+		"/usr/include/c++/6.3.1/bits/stl_vector.h",
+		"/home/alias/.cache/.fr-XVGpdE/Camera Calibration/camera_calibration/camera_calibration/camera_calibration.cpp",
+		"/home/alias/Projects/CPP/OpenCV/Camera_Calibration_DsynFLO/Camera Calibration/camera_calibration/camera_calibration/camera_calibration.cpp",
+		"/home/alias/Videos/Screencast from 02-28-2017 06:06:11 PM.webm",
+		"/home/alias/Projects/CPP/OpenCV/main.cpp",
+		"/usr/include/opencv2/core/mat.inl.hpp",
+		"/usr/include/opencv2/core/cvstd.hpp",
+		"/home/alias/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/alias/.config/sublime-text-3/Packages/User/c++ (opencv).sublime-build",
+		"/home/alias/Projects/CPP/OpenCV/OpenCV.sublime-project",
+		"/home/alias/.config/sublime-text-3/Packages/SublimeLinter/Default (Linux).sublime-keymap",
+		"/home/alias/.config/sublime-text-3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/home/alias/.config/sublime-text-3/Packages/SublimeGDB/SublimeGDB.sublime-settings",
+		"/home/alias/Projects/CPP/OpenCV/mian.cpp",
+		"/home/alias/Desktop/Problems 2.8-3.3/2.8/main.cpp",
+		"/home/alias/Desktop/silverfish_quad_cloud_exported.uav",
+		"/home/alias/Downloads/Graca Machel.doc",
+		"/home/alias/Documents/CPP/Final Project/main.cpp",
+		"/home/alias/Downloads/attachment.cgi.txt",
+		"/home/alias/.config/sublime-text-3/Packages/Themr/Default (Linux).sublime-keymap",
+		"/home/alias/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/alias/Documents/CPP/Final Project/The Declaration of Independence.txt",
+		"/home/alias/.config/sublime-text-3/Packages/SublimeGDB/Default.sublime-keymap",
+		"/home/alias/Desktop/testProj/main.cpp",
+		"/home/alias/Desktop/AA 2.5/report",
+		"/home/alias/Desktop/AA 2.5/main.cpp",
+		"/home/alias/Desktop/AA HW 2/test.sublime-project",
+		"/home/alias/.config/sublime-text-3/Packages/PackageResourceViewer/README.md",
+		"/home/alias/Desktop/test/towers.cpp",
+		"/home/alias/.config/rslsync/rslsync.conf",
+		"/home/alias/Documents/Dear SecurityKISS User.txt",
+		"/home/alias/Documents/CPP/fooling_around.cpp",
+		"/home/alias/.cache/.fr-XVohEi/C_Assignment/main.c",
+		"/home/alias/bin/README.md",
+		"/home/alias/scripts/battery.sh",
+		"/home/alias/scripts/monitor.sh",
+		"/home/alias/.config/autostart/touchegg.desktop",
+		"/home/alias/Projects/SQL/final_project.sql",
+		"/home/alias/Projects/SQL/delete thread.sql",
+		"/usr/share/themes/Default/xfwm4/themerc",
+		"/usr/share/themes/Default-hdpi/xfwm4/themerc",
+		"/usr/share/themes/Arc-Dark/xfwm4/themerc",
+		"/home/alias/Downloads/Arc-theme-HiDPI/README.md",
+		"/home/alias/Desktop/Binary Search Tree/bst.cpp"
+	],
+	"find":
+	{
+		"height": 80.0
+	},
+	"find_in_files":
+	{
+		"height": 232.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"object_points2",
+			"cvFindChessboardCorners",
+			"0.75",
+			"web"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"1.00"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.cpp.bak",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2236,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								372,
+								372
+							]
+						],
+						"settings":
+						{
+							"spell_check": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "main.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1460,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								297,
+								297
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 912.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "frameProcessor.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 381,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								379,
+								379
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "frameProcessor.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 821,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								622,
+								622
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1272,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "OpenCV.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 315,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								305,
+								305
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 273.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/make C++.sublime-build",
+	"project": "OpenCV.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 900.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 684.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 366.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
