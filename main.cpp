@@ -5,8 +5,8 @@
 #include "opencv2/opencv.hpp"
 #include "frameProcessor.h"
 
-const int board_w = 6;
-const int board_h = 4;
+const int board_h = 6;
+const int board_w = 9;
 
 int main(int argc, char** argv){
 	std::string in;

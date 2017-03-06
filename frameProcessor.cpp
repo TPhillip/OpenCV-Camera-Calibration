@@ -20,33 +20,33 @@ void frameProcessor::loopProcessCaptureDev(){
 	if(image_source == CAPTURE_DEVICE){
 		if(capDev.open(source_v4l_device)){
 			int good_frames = 0;
+			bool patternWasFound = false;
 			bool result_found = false;
 			while(true){
 				int key = cv::waitKey(1);
 				capDev >> current_frame;
 				cv::Mat disposable_frame;
 				capDev >> disposable_frame;
-				cvtColor(disposable_frame, grayscale_frame, CV_BGR2GRAY);
+				cvtColor(current_frame, grayscale_frame, CV_BGR2GRAY);
 				if(disposable_frame.empty() ) break;
 
 				//  --- tracking the checkerboard pattern ---
 
-				bool patternWasFound = cv::findChessboardCorners(disposable_frame, *boardSize, *centers, cv::CALIB_CB_FAST_CHECK | CV_CALIB_CB_ADAPTIVE_THRESH);
-				//cv::cornerSubPix(grayscale_frame, *centers, cv::Size(11, 11), cv::Size(-1, -1), cv::TermCriteria(CV_TERMCRIT_EPS | CV_TERMCRIT_ITER, 30, 0.1));
-				cv::drawChessboardCorners(disposable_frame, *boardSize, *centers, patternWasFound);
+				
+				if(!imageCalibrated){
+					 patternWasFound = cv::findChessboardCorners(disposable_frame, *boardSize, *centers, cv::CALIB_CB_FAST_CHECK | CV_CALIB_CB_ADAPTIVE_THRESH);
+					//cv::cornerSubPix(grayscale_frame, *centers, cv::Size(11, 11), cv::Size(-1, -1), cv::TermCriteria(CV_TERMCRIT_EPS | CV_TERMCRIT_ITER, 30, 0.1));
+					cv::drawChessboardCorners(disposable_frame, *boardSize, *centers, patternWasFound);
+				}
+				
 
 				// --pattern is found, do stuff ---
 
 				if(patternWasFound && (good_frames < calibration_frames_count)){
-					std::string text = "Pattern found";
+					std::string text = "Pattern found, press [space] to save";
 					cv::putText(disposable_frame, text , cvPoint(30, 30), cv::FONT_HERSHEY_PLAIN, 1.5, cvScalar(0,0,255), 2);
 					text = "saved frame(s) " + std::to_string(good_frames) + "/" +  std::to_string(calibration_frames_count);
 					cv::putText(disposable_frame, text, cvPoint(30, 70), cv::FONT_HERSHEY_PLAIN, 1.5, cvScalar(0,0,255), 2);
-
-					objVec->push_back(*obj);
-					centersVec->push_back(*centers);
-
-					good_frames++;
 				}
 				else if(good_frames >= calibration_frames_count){
 					if(!imageCalibrated)
@@ -68,6 +68,11 @@ void frameProcessor::loopProcessCaptureDev(){
 				cv::imshow("current_frame", disposable_frame);
 				if(key == 27){
 					break;
+				}
+				if(key == ' ' && patternWasFound && !imageCalibrated){
+					objVec->push_back(*obj);
+					centersVec->push_back(*centers);
+					good_frames++;
 				}
 			}
 		}
